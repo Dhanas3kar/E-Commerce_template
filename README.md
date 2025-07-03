@@ -3,7 +3,7 @@ A basic architecture of an eCommerce web application built with modern frontend 
 
 🚀 Quick Start
 # Clone the repository
-git clone https://github.com/james-muriithi/e-shop.git
+https://github.com/Dhanas3kar/E-Commerce_template.git
 
 # Navigate into the project directory
 cd src
@@ -34,8 +34,8 @@ Core components of this boilerplate eCommerce setup:
 - Travis CI – Continuous Integration
 
 🪪 License
-Licensed under 0BSD
+Licensed under MIT
 
-This Repo is open for anyone, you can practice/give your contribution to develop this E-commerece block
+
 
 
