@@ -183,45 +183,50 @@
 .footer {
   background: linear-gradient(135deg, #181818 60%, #23272f 100%);
   color: #f1f1f1;
-  padding: 48px 0 0 0;
+  padding: 56px 0 0 0;
   position: relative;
+  box-shadow: 0 -2px 24px rgba(144,202,249,0.07);
 }
 
 .footer-main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
+  gap: 36px;
 }
 
 .footer-brand {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   letter-spacing: 1.5px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   margin: 0;
   padding: 0;
 }
 
 .footer-social a {
   color: #90caf9;
-  font-size: 2rem;
+  font-size: 2.1rem;
   border-radius: 50%;
   background: #181818;
-  padding: 8px;
+  padding: 10px;
   transition: color 0.2s, background 0.2s, transform 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .footer-social a:focus,
@@ -238,19 +243,28 @@
 
 .developer-card {
   background: #23272f;
-  border-radius: 16px;
-  padding: 22px 28px;
-  margin: 0 0 8px 0;
+  border-radius: 18px;
+  padding: 24px 32px;
+  margin: 0 0 10px 0;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-  max-width: 420px;
+  max-width: 440px;
   transition: box-shadow 0.2s;
 }
 
 .developer-card:hover {
-  box-shadow: 0 8px 24px rgba(144,202,249,0.10);
+  box-shadow: 0 8px 32px rgba(144,202,249,0.13);
+}
+
+.dev-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(144,202,249,0.13);
+  border: 2px solid #90caf9;
 }
 
 .developer-info {
@@ -262,20 +276,20 @@
 .dev-name {
   color: #fff;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.18rem;
 }
 
 .dev-role {
   color: #90caf9;
-  font-size: 1rem;
+  font-size: 1.02rem;
 }
 
 .footer-copyright {
   width: 100%;
   text-align: center;
   color: #bdbdbd;
-  font-size: 1rem;
-  margin-top: 48px;
+  font-size: 1.05rem;
+  margin-top: 54px;
   margin-bottom: 0;
   padding-bottom: 18px;
   letter-spacing: 0.5px;
@@ -285,8 +299,129 @@
   box-shadow: none;
 }
 
+.footer-copyright span {
+  font-size: 0.97rem;
+  color: #90caf9;
+}
+
 /* Optional: update other elements for dark theme */
 body {
   background: #121212;
   color: #e0e0e0;
+}
+
+/* Feedback prompt card */
+.footer-prompt-card {
+  background: #23272f;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin: 18px 0 0 0;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prompt-title {
+  color: #90caf9;
+  font-weight: 600;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prompt-btn {
+  background: #90caf9;
+  color: #181818;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-top: 8px;
+}
+
+.prompt-btn:hover,
+.prompt-btn:focus {
+  background: #fff;
+  color: #181818;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.feedback-modal {
+  background: #181818;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(144,202,249,0.13);
+  padding: 18px;
+  margin-top: 10px;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.feedback-form label {
+  color: #90caf9;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  background: #23272f;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border 0.2s;
+}
+
+.feedback-form textarea:focus {
+  border-color: #90caf9;
+  outline: none;
+}
+
+.feedback-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.prompt-btn.cancel {
+  background: #23272f;
+  color: #90caf9;
+  border: 1px solid #90caf9;
+}
+
+.prompt-btn.cancel:hover {
+  background: #90caf9;
+  color: #23272f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .footer-main,
+  .developer-card,
+  .footer-prompt-card {
+    max-width: 100%;
+    padding: 16px;
+    gap: 16px;
+  }
+  .dev-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-brand {
+    font-size: 1.3rem;
+  }
+  .footer-social a {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
 }
